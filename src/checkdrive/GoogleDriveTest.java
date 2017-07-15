@@ -104,6 +104,14 @@ public class GoogleDriveTest {
                 .setApplicationName(APPLICATION_NAME)
                 .build();
     }
+	
+	public  Drive getDriveService1() throws IOException {
+		Credential credential = authorize();
+        return new Drive.Builder(
+                HTTP_TRANSPORT, JSON_FACTORY, credential)
+                .setApplicationName(APPLICATION_NAME)
+                .build();
+    }
 
     public static void main(String[] args) throws IOException {
         // Build a new authorized API client service.
